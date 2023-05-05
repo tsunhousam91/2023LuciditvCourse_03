@@ -11,25 +11,19 @@
                 {{ item.memo }}
             </el-descriptions-item>
         </el-descriptions>
-
     </div>
 </template>
 
 <script setup lang="ts">
-import { reactive, ref, computed, onMounted, watch } from 'vue'
 import timeUtils from '@/utils/timeUtils'
 
 const props = defineProps(['formList'])
 
-onMounted(() => {
-    console.log(props.formList)
-})
 </script>
 
 <style  scoped>
 .sign-up-list-root {
     width: 100%;
     height: 100%;
-
 }
 </style>

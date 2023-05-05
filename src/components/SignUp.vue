@@ -52,15 +52,14 @@
                 <el-input v-model="form.memo" type="textarea" :maxlength="500"/>
             </el-form-item>
             <el-form-item>
-                <el-button type="primary" @click="onSubmit">Create</el-button>
-                <el-button>Cancel</el-button>
+                <el-button type="primary" @click="onSubmit">提交報名</el-button>
             </el-form-item>
         </el-form>
     </div>
 </template>
 
 <script setup lang="ts">
-import { reactive, ref, computed, onMounted, watch } from 'vue'
+import { reactive, ref } from 'vue'
 
 const emit = defineEmits(['onSubmit'])
 
@@ -120,15 +119,11 @@ function onSubmit() {
 }
 
 
-onMounted(() => {
-
-})
 </script>
 
 <style  scoped>
 .sign-up-root {
     width: 100%;
     height: 100%;
-
 }
 </style>
