@@ -1,7 +1,9 @@
 <template>
     <div class="vue-test-root">
-
-        <div class="display" v-for="n in 8">{{ displayValue }}</div>
+        <div class="display" v-for="n in 8">
+            {{ displayValue }}
+        </div>
+        
         <div>
             <input type="text" v-model="textVariable">
         </div>
@@ -15,6 +17,7 @@
 import { reactive, ref, computed, onMounted, watch } from 'vue'
 
 const displayValue = ref('World')
+
 const textVariable = ref('初始值')
 
 function changeDisplayValue(newValue: string) {

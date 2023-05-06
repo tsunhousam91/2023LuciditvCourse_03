@@ -12,7 +12,7 @@
       <el-container>
         <el-main>
           <SignUp v-if="tabName == '新增報名'" class="form-region" @onSubmit="onSubmit" />
-          <SignUpList v-if="tabName == '報名列表'" :formList="signUpList" />
+          <SignUpList v-if="tabName == '報名列表'" :formList="signUpList" :test="1" />
           <VueTest v-if="tabName == 'VueTest'"  />
       
         </el-main>
@@ -20,6 +20,7 @@
     </el-container>
   </div>
 </template>
+
 
 <script setup lang="ts">
 import { ref } from 'vue'
@@ -39,6 +40,13 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
 }
 
 function onSubmit(form: any) {
+
+  console.log('receive event!!!')
+  console.log(form)
+  console.log('receive event!!!!!!')
+
+
+
   /// 接收到報名的表單，這邊不審核直接加入已報名列表
   signUpList.value.push(form);
   tabName.value = '報名列表'
